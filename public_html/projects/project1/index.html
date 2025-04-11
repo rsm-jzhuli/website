@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project 1 | Jun Zhu Li</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../../assets/vendors/themify-icons/css/themify-icons.css" />
+  <link rel="stylesheet" href="../../assets/css/meyawo.css" />
+  <style>
+    pre {
+      background: #f5f5f5;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      text-align: left;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="custom-navbar">
+    <div class="container">
+      <a class="logo" href="../../index.html">← Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="header-content container text-center">
+      <h1 class="header-title">Project 1: Weight vs MPG</h1>
+      <p class="header-subtitle">A simple visualization using Python & matplotlib</p>
+    </div>
+  </header>
+
+  <!-- Project Content -->
+  <section class="section container">
+    <h3>Visualization</h3>
+    <p>This chart explores the relationship between car weight and fuel efficiency using a sample dataset similar to the classic <code>mtcars</code>.</p>
+    <img src="images/project1_chart.png" alt="Scatter plot of weight vs mpg" class="img-fluid rounded shadow mb-4" />
+
+    <h3>Python Code</h3>
+    <pre><code class="language-python"></code>
+import matplotlib.pyplot as plt
+
+# Sample data (car weight and MPG)
+wt = [2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.440,
+      3.440, 4.070, 3.730, 3.780, 5.250, 5.424, 5.345, 2.200, 1.615, 1.835,
+      2.465, 3.520, 3.435, 3.840, 3.845, 1.935, 2.140, 1.513, 3.170, 2.770,
+      3.570, 2.780]
+
+mpg = [21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2,
+       17.8, 16.4, 17.3, 15.2, 10.4, 10.4, 14.7, 32.4, 30.4, 33.9,
+       21.5, 15.5, 15.2, 13.3, 19.2, 27.3, 26.0, 30.4, 15.8, 19.7,
+       15.0, 21.4]
+
+plt.scatter(wt, mpg)
+plt.xlabel('Weight')
+plt.ylabel('Miles per Gallon (mpg)')
+plt.title('Scatter Plot of Weight vs. MPG')
+plt.grid(True)
+plt.show()
+</code></pre>
+
+    <h3>Project Summary</h3>
+    <p>
+      In this project, I visualized the correlation between vehicle weight and fuel efficiency using Python and matplotlib. The scatter plot reveals a negative trend — as weight increases, MPG generally decreases. This quick visual demonstrates how accessible insights can be derived from simple data analysis.
+    </p>
+
+    <h4>Links</h4>
+    <ul>
+      <li><a href="https://github.com/yourusername/project1" target="_blank">View code on GitHub</a></li>
+      <li><a href="../../assets/docs/Jun-Zhu-Li-CV.pdf" target="_blank">Download Full Report (PDF)</a></li>
+    </ul>
+  </section>
+
+  <!-- Scripts -->
+  <script src="../../assets/vendors/jquery/jquery-3.4.1.js"></script>
+  <script src="../../assets/js/meyawo.js"></script>
+</body>
+</html>
